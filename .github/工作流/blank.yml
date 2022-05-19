@@ -4,14 +4,14 @@ on:
   workflow_dispatch:
   schedule:
    # 定时执行可参考https://tool.lu/crontab
-    - cron: 22 6 */3 * *
+    - cron: 22 6 */6 * *
  
 jobs:
   setup:
     env:
-      #claim  --- 认领游戏商城周免游戏及其免费DLC
-      #unreal --- 认领虚幻商城月免内容
-      #get    --- 搬空游戏商城的免费游戏或免费DLC
+      claim # --- 认领游戏商城周免游戏及其免费DLC
+      unreal # --- 认领虚幻商城月免内容
+      get   # --- 搬空游戏商城的免费游戏或免费DLC
       #默认指令为 python main.py claim 表示仅执行周免认领任务
       COMMAND: "python main.py claim"
       EPΙC_EMAΙL: ${{ secrets.EPIC_EMAIL }}
