@@ -13,7 +13,7 @@ jobs:
       #unreal # --- 认领虚幻商城月免内容
       #get   # --- 搬空游戏商城的免费游戏或免费DLC
       #默认指令为 python main.py claim 表示仅执行周免认领任务
-      COMMAND: "python main.py claim "
+      COMMAND: "python main.py claim && python main.py unreal &&python main.py get"
       EPΙC_EMAΙL: ${{ secrets.EPIC_EMAIL }}
       EPΙC_PASSWΟRD: ${{ secrets.EPIC_PASSWORD }}
       PUSHER_TELEGRAM: ${{ secrets.PUSHER_TELEGRAM }}
